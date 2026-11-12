@@ -1,0 +1,33 @@
+# Login Testing – Execution Report
+
+## Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Total test cases | 5 |
+| Executed | 2 |
+| Passed | 2 |
+| Failed | 0 |
+| Not run | 3 |
+
+## Executed Test Cases
+
+### TC-LOGIN-001 – Login with valid credentials
+- **Test data:** `standard_user` / `secret_sauce`
+- **Expected result:** User is redirected to the inventory/products page.
+- **Actual result:** User was redirected to the inventory page successfully.
+- **Status:** PASS
+
+### TC-LOGIN-002 – Login with invalid username
+- **Test data:** `wrong_user` / `secret_sauce`
+- **Expected result:** Login is rejected and a clear error message is displayed.
+- **Actual result:** `Epic sadface: Username and password do not match any user in this service`
+- **Status:** PASS
+
+## Pending Test Cases
+- TC-LOGIN-003 – Login with invalid password
+- TC-LOGIN-004 – Submit both fields empty
+- TC-LOGIN-005 – Submit username without password
+
+## Notes
+Only the two test cases above were executed and confirmed during this test session. Pending cases are intentionally marked as **Not Run**. No defects have been reported because no unexpected behavior has been observed so far.
