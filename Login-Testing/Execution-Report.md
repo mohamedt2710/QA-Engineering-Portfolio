@@ -5,10 +5,10 @@
 | Metric | Result |
 |---|---:|
 | Total test cases | 5 |
-| Executed | 3 |
-| Passed | 3 |
+| Executed | 4 |
+| Passed | 4 |
 | Failed | 0 |
-| Not run | 2 |
+| Not run | 1 |
 
 ## Executed Test Cases
 
@@ -30,9 +30,14 @@
 - **Actual result:** `Epic sadface: Username and password do not match any user in this service`
 - **Status:** PASS
 
-## Pending Test Cases
-- TC-LOGIN-004 – Submit both fields empty
+### TC-LOGIN-004 – Submit both fields empty
+- **Test data:** Empty username and empty password
+- **Expected result:** Login is rejected and required-field validation is displayed.
+- **Actual result:** `Epic sadface: Username is required`
+- **Status:** PASS
+
+## Pending Test Case
 - TC-LOGIN-005 – Submit username without password
 
 ## Notes
-Only the three test cases above were executed and confirmed during this test session. Pending cases are intentionally marked as **Not Run**. No defects have been reported because no unexpected behavior has been observed so far.
+Only the four test cases above were executed and confirmed during this test session. The remaining case is intentionally marked as **Not Run**. No defects have been reported because no unexpected behavior has been observed so far.
