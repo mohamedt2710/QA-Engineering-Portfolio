@@ -1,36 +1,55 @@
-# Project 01 – Login Functionality Testing
+# Project 01 – SauceDemo Login Testing
+
+## Project Overview
+Manual testing of the login functionality of SauceDemo (Swag Labs), a public e-commerce demo application.
+
+- **Application:** SauceDemo
+- **URL:** https://www.saucedemo.com/
+- **Testing type:** Manual functional testing
+- **Test environment:** Web browser
 
 ## Objective
-Practice manual testing of a login form by checking valid credentials, invalid credentials, and empty or incomplete input.
-
-## Application Under Test
-- Name: SauceDemo (Swag Labs)
-- URL: https://www.saucedemo.com/
-- Type: Public e-commerce demo application
+Verify that the login feature handles valid credentials, invalid credentials, and missing input correctly, and that users receive clear validation feedback.
 
 ## Scope
-- Successful login
+The initial execution covered:
+- Successful login with valid credentials
 - Invalid username
 - Invalid password
 - Empty username and password
 - Username provided without password
 
-## Test approach
-Execute each test manually in a browser. Record the actual result and execution status only after running the test. Do not report a defect unless the observed behavior differs from the expected behavior and can be reproduced.
+Additional negative, boundary, and usability scenarios will be added and executed in the next test cycle.
 
-## Test data
-SauceDemo provides public demo accounts. Use the credentials currently documented by the demo application. Do not use personal or real account credentials.
+## Test Approach
+Test cases are designed from the login flow and executed manually. Actual results and statuses are recorded after execution. A defect is reported only when the observed behavior differs from the expected behavior and the issue can be reproduced.
 
-## Files
+## Execution Summary
+
+| Metric | Result |
+|---|---:|
+| Total executed test cases | 5 |
+| Passed | 5 |
+| Failed | 0 |
+| Not run | 0 |
+| Pass rate | 100% |
+
+## Findings
+- Valid demo credentials successfully redirected the user to the inventory page.
+- Invalid credentials were rejected with an authentication error message.
+- Empty and incomplete login submissions were rejected with validation messages.
+- No defects were observed in the five executed test cases.
+
+See the [Execution Report](Execution-Report.md) for test data, expected results, actual results, and individual statuses.
+
+## Project Files
 - [Test Scenarios](Test-Scenarios.md)
 - [Test Cases](Test-Cases.csv)
+- [Execution Report](Execution-Report.md)
 - [Bug Report Template](Bug-Report-Template.md)
 
-## Execution status
-Not executed yet. Fill in Actual Result and Status after testing.
+## Test Data
+Use only the public demo credentials documented by SauceDemo. Never use personal or real account credentials.
 
-## Learning outcomes
-- Understand positive and negative testing
-- Write clear, reproducible test cases
-- Distinguish expected behavior from actual behavior
-- Report confirmed defects with useful evidence
+---
+**Project 01** – Part of the QA Engineering Portfolio.
