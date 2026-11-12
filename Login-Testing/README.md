@@ -19,7 +19,7 @@ The initial execution covered:
 - Empty username and password
 - Username provided without password
 
-Additional negative, boundary, and usability scenarios will be added and executed in the next test cycle.
+The test inventory has now been expanded with additional scenarios for locked-out users, credential case sensitivity, whitespace, password masking, Enter-key submission, and long input values. These six additional cases are marked **Not Run** until they are executed and verified.
 
 ## Test Approach
 Test cases are designed from the login flow and executed manually. Actual results and statuses are recorded after execution. A defect is reported only when the observed behavior differs from the expected behavior and the issue can be reproduced.
@@ -28,11 +28,12 @@ Test cases are designed from the login flow and executed manually. Actual result
 
 | Metric | Result |
 |---|---:|
-| Total executed test cases | 5 |
+| Total test cases in inventory | 11 |
+| Executed | 5 |
 | Passed | 5 |
 | Failed | 0 |
-| Not run | 0 |
-| Pass rate | 100% |
+| Not run | 6 |
+| Pass rate (executed cases) | 100% |
 
 ## Findings
 - Valid demo credentials successfully redirected the user to the inventory page.
