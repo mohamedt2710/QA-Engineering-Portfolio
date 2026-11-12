@@ -1,0 +1,182 @@
+{
+  "info": {
+    "_postman_id": "b4d2d28a-8f51-4f2e-8f31-8f44c6c5b001",
+    "name": "JSONPlaceholder – QA API Testing",
+    "description": "Practice collection for positive and negative API checks. Set the collection variable baseUrl to https://jsonplaceholder.typicode.com.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET – All posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/posts"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Response is a non-empty array', function () { const data = pm.response.json(); pm.expect(data).to.be.an('array').that.is.not.empty; });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET – Existing post",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/posts/1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Post has expected fields and types', function () { const data = pm.response.json(); pm.expect(data).to.have.property('id', 1); pm.expect(data.userId).to.be.a('number'); pm.expect(data.title).to.be.a('string'); pm.expect(data.body).to.be.a('string'); });",
+              "pm.test('Response content type is JSON', function () { pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET – Unsupported route (negative)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/invalid-resource"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 404', function () { pm.response.to.have.status(404); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST – Create post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"QA Test Post\",\n  \"body\": \"Created from Postman\",\n  \"userId\": 1\n}"
+        },
+        "url": "{{baseUrl}}/posts"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 201', function () { pm.response.to.have.status(201); });",
+              "pm.test('Response contains submitted data and generated id', function () { const data = pm.response.json(); pm.expect(data.title).to.eql('QA Test Post'); pm.expect(data.body).to.eql('Created from Postman'); pm.expect(data.userId).to.eql(1); pm.expect(data.id).to.be.a('number'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUT – Replace post",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"title\": \"Updated by QA\",\n  \"body\": \"Full update request\",\n  \"userId\": 1\n}"
+        },
+        "url": "{{baseUrl}}/posts/1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Updated fields are returned', function () { const data = pm.response.json(); pm.expect(data.title).to.eql('Updated by QA'); pm.expect(data.body).to.eql('Full update request'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PATCH – Partially update post",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Patched by QA\"\n}"
+        },
+        "url": "{{baseUrl}}/posts/1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Title is updated', function () { pm.expect(pm.response.json().title).to.eql('Patched by QA'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "DELETE – Delete post",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/posts/1"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code indicates successful deletion', function () { pm.expect([200, 204]).to.include(pm.response.code); });"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://jsonplaceholder.typicode.com"
+    }
+  ]
+}
