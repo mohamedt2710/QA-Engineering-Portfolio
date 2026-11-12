@@ -5,10 +5,10 @@
 | Metric | Result |
 |---|---:|
 | Total test cases | 5 |
-| Executed | 2 |
-| Passed | 2 |
+| Executed | 3 |
+| Passed | 3 |
 | Failed | 0 |
-| Not run | 3 |
+| Not run | 2 |
 
 ## Executed Test Cases
 
@@ -24,10 +24,15 @@
 - **Actual result:** `Epic sadface: Username and password do not match any user in this service`
 - **Status:** PASS
 
+### TC-LOGIN-003 – Login with invalid password
+- **Test data:** `standard_user` / `wrong_password`
+- **Expected result:** Login is rejected and a clear error message is displayed.
+- **Actual result:** `Epic sadface: Username and password do not match any user in this service`
+- **Status:** PASS
+
 ## Pending Test Cases
-- TC-LOGIN-003 – Login with invalid password
 - TC-LOGIN-004 – Submit both fields empty
 - TC-LOGIN-005 – Submit username without password
 
 ## Notes
-Only the two test cases above were executed and confirmed during this test session. Pending cases are intentionally marked as **Not Run**. No defects have been reported because no unexpected behavior has been observed so far.
+Only the three test cases above were executed and confirmed during this test session. Pending cases are intentionally marked as **Not Run**. No defects have been reported because no unexpected behavior has been observed so far.
