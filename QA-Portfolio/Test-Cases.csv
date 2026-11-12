@@ -1,0 +1,11 @@
+Test Case ID,Module,Scenario,Method,Endpoint,Test Data,Expected Result,Priority
+API-001,Posts,Retrieve all posts,GET,/posts,None,200 OK and response is a non-empty JSON array,High
+API-002,Posts,Retrieve an existing post,GET,/posts/1,id=1,200 OK and response contains userId id title body,High
+API-003,Posts,Retrieve a post with invalid ID format,GET,/posts/abc,id=abc,Document actual API behavior and verify response is handled consistently,Medium
+API-004,Posts,Retrieve an unsupported route,GET,/invalid-resource,None,404 Not Found,Medium
+API-005,Posts,Create a post,POST,/posts,"title=QA Test; body=Created from Postman; userId=1",201 Created and response contains submitted fields plus generated id,High
+API-006,Posts,Update an existing post,PUT,/posts/1,"id=1; title=Updated title; body=Updated body; userId=1",200 OK and response reflects submitted fields,High
+API-007,Posts,Partially update a post,PATCH,/posts/1,"title=Patched title",200 OK and response reflects patched title,Medium
+API-008,Posts,Delete an existing post,DELETE,/posts/1,None,200 OK or documented successful no-content response,Medium
+API-009,Posts,Validate response content type,GET,/posts/1,None,Content-Type indicates JSON,Medium
+API-010,Posts,Validate required response field types,GET,/posts/1,id=1,id and userId are numeric and title and body are strings,High
