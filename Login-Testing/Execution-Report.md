@@ -5,10 +5,10 @@
 | Metric | Result |
 |---|---:|
 | Total test cases | 5 |
-| Executed | 4 |
-| Passed | 4 |
+| Executed | 5 |
+| Passed | 5 |
 | Failed | 0 |
-| Not run | 1 |
+| Not run | 0 |
 
 ## Executed Test Cases
 
@@ -36,8 +36,14 @@
 - **Actual result:** `Epic sadface: Username is required`
 - **Status:** PASS
 
-## Pending Test Case
-- TC-LOGIN-005 – Submit username without password
+### TC-LOGIN-005 – Submit username without password
+- **Test data:** `standard_user` / empty password
+- **Expected result:** Login is rejected and password-required validation is displayed.
+- **Actual result:** `Password is required`
+- **Status:** PASS
+
+## Conclusion
+All five planned login test cases were executed successfully. No failures or defects were observed during this test session.
 
 ## Notes
-Only the four test cases above were executed and confirmed during this test session. The remaining case is intentionally marked as **Not Run**. No defects have been reported because no unexpected behavior has been observed so far.
+Results are based on the manual execution observations reported during this test session.
