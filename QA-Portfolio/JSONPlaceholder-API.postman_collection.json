@@ -48,6 +48,26 @@
       ]
     },
     {
+      "name": "GET – Invalid post ID format (API-003)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/posts/abc"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Request is handled without a server error', function () { pm.expect(pm.response.code).to.be.below(500); });",
+              "pm.test('Response is JSON or an empty body', function () { const contentType = pm.response.headers.get('Content-Type') || ''; pm.expect(contentType === '' || contentType.includes('application/json')).to.eql(true); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "GET – Unsupported route (negative)",
       "request": {
         "method": "GET",
