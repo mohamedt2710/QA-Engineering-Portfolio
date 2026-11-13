@@ -37,7 +37,8 @@ API test planning and a Postman collection for the Posts resource.
 - GET, POST, PUT, PATCH, and DELETE requests
 - Positive and negative checks
 - Response status, JSON fields, data types, and content type assertions
-- Execution evidence will be documented after running the collection
+- 10 API test cases documented, mapped to 8 Postman requests
+- [API Test Execution Report](./QA-Portfolio/Execution-Report.md) clearly records all cases as Not Run until actual execution evidence is available
 
 ## Testing approach
 
