@@ -2,39 +2,54 @@
 
 **Software Testing Engineer | Manual Testing | API Testing | Test Automation**
 
-I am a Computer Science graduate (Software Engineering major) focused on software quality assurance. I build practical testing projects that demonstrate test analysis, test design, execution, defect reporting, and automation.
+I am a Computer Science graduate (Software Engineering major) focused on software quality assurance. This repository contains practical testing work covering test analysis, test design, manual execution, API validation, and defect documentation.
 
-- **Core skills:** Manual testing, functional testing, regression testing, test case design, bug reporting
-- **Tools & technologies:** Jira, Postman, Selenium WebDriver, Java, SQL, Git/GitHub
-- **Automation learning:** Playwright with TypeScript
-- **Testing practices:** SDLC, STLC, Agile, equivalence partitioning, boundary value analysis, positive and negative testing
+## Skills demonstrated
 
-## Featured project
+- **Manual QA:** Functional, negative, boundary, and regression testing
+- **Test design:** Test scenarios, test cases, test data, and execution reports
+- **API testing:** Postman, HTTP methods, status codes, JSON structure, and assertions
+- **Defect management:** Reproducible steps, expected vs. actual results, severity, and priority
+- **Tools:** Jira, Postman, Selenium WebDriver, Java, SQL, Git/GitHub
+- **Currently learning:** Playwright with TypeScript
 
-### QA Engineering Portfolio
-A hands-on collection of QA artifacts and practice exercises.
+## Projects
 
-**Current scope**
-- Test planning and test case design
-- Login and registration scenarios
-- API testing with Postman
-- Defect documentation templates
-- Practical testing exercises with transparent execution status
+### 1. [Login Functionality Testing](./Login-Testing/)
+Manual functional testing of the SauceDemo login flow.
 
-[Open the QA Engineering Portfolio files](./)
+- 11 test cases documented
+- 5 executed: 5 passed, 0 failed
+- 6 additional cases remain Not Run
+- Includes scenarios, CSV test cases, execution report, and bug report template
 
-## Other projects
+### 2. [Registration Functionality Testing](./Registration-Testing/)
+Manual testing of a public registration practice form.
 
-- [Automation Web Site](https://github.com/mohamedt2710/automation-web-site) — web automation practice
-- [GitHub profile](https://github.com/mohamedt2710)
+- 11 test cases executed
+- 10 passed
+- 1 needs investigation; no confirmed defect reported
+- Covers required fields, password confirmation, username format, and length boundaries
 
-## What I focus on
+### 3. [REST API Testing – JSONPlaceholder](./QA-Portfolio/)
+API test planning and a Postman collection for the Posts resource.
 
-1. Understanding requirements and identifying risks.
-2. Designing positive, negative, boundary, and edge test scenarios.
-3. Executing tests and recording clear evidence.
-4. Reporting reproducible defects with expected and actual results.
-5. Retesting fixes and performing risk-based regression testing.
+- GET, POST, PUT, PATCH, and DELETE requests
+- Positive and negative checks
+- Response status, JSON fields, data types, and content type assertions
+- Execution evidence will be documented after running the collection
+
+## Testing approach
+
+1. Review requirements and identify risks.
+2. Design positive, negative, boundary, and edge test scenarios.
+3. Execute tests and record actual results.
+4. Report only reproducible mismatches as defects.
+5. Retest fixes and perform risk-based regression testing.
+
+## Other work
+
+- [Automation Web Site](https://github.com/mohamedt2710/automation-web-site) — an early Selenium automation learning project.
 
 ## Contact
 
@@ -43,4 +58,4 @@ A hands-on collection of QA artifacts and practice exercises.
 
 ---
 
-*This portfolio contains practice projects. Test results and defects are reported only when they have actually been executed and verified.*
+*Execution status is stated transparently. Planned or unexecuted test cases are not presented as completed tests.*
