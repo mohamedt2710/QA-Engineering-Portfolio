@@ -4,11 +4,14 @@
 
 | Metric | Result |
 |---|---:|
-| Total test cases | 5 |
+| Total test cases in inventory | 11 |
 | Executed | 5 |
 | Passed | 5 |
 | Failed | 0 |
-| Not run | 0 |
+| Not run | 6 |
+| Pass rate (executed cases) | 100% |
+
+> The pass rate is calculated from executed cases only. The six remaining cases are not included because they have not been executed.
 
 ## Executed Test Cases
 
@@ -42,8 +45,25 @@
 - **Actual result:** `Password is required`
 - **Status:** PASS
 
-## Conclusion
-All five planned login test cases were executed successfully. No failures or defects were observed during this test session.
+## Not Run – Pending Execution
 
-## Notes
-Results are based on the manual execution observations reported during this test session.
+| Test Case ID | Scenario |
+|---|---|
+| TC-LOGIN-006 | Login with locked-out user |
+| TC-LOGIN-007 | Check credential case sensitivity |
+| TC-LOGIN-008 | Check leading and trailing spaces |
+| TC-LOGIN-009 | Verify password masking |
+| TC-LOGIN-010 | Submit login using Enter key |
+| TC-LOGIN-011 | Submit very long credential values |
+
+These cases are documented in [Test-Cases.csv](Test-Cases.csv). Their actual results and statuses must be updated after manual execution.
+
+## Conclusion
+
+All five executed login test cases passed. Six additional cases remain pending. No failures or confirmed defects were observed in the executed test set.
+
+## Execution Notes
+
+- Results are based on the manual execution observations reported during the test session.
+- The report does not claim that the six pending cases were tested.
+- A defect should be reported only after an actual mismatch has been reproduced.
