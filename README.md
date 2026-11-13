@@ -23,6 +23,12 @@ A hands-on collection of QA artifacts and practice exercises.
 
 [Open the QA Engineering Portfolio files](./)
 
+## E-Commerce Testing Project
+
+A structured manual testing project for the SauceDemo e-commerce demo application, covering login, inventory, cart, checkout, order overview, and order completion. Includes 17 documented functional test cases and a reusable bug report template. Execution is pending; no test outcomes or defects are claimed before verification.
+
+[Open E-Commerce Testing](./E-Commerce-Testing/README.md)
+
 ## Other projects
 
 - [Automation Web Site](https://github.com/mohamedt2710/automation-web-site) — web automation practice
